@@ -30,6 +30,8 @@ public class Config {
         return factory;
     }
 
+    // Could also use SchedulerFactoryBeanCustomizer
+
     @Bean
     public Scheduler myScheduler(DataSource dataSource, QuartzProperties quartzProperties) {
         return mySchedulerFactory(dataSource, quartzProperties).getScheduler();
